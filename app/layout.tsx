@@ -1,3 +1,5 @@
+import "@/app/ui/global.css";
+import { roboto } from "@/app/ui/fonts";
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${roboto.className} antialiased}`}>
+        {children}
+        <footer className="flex justify-center py-10 item-center">
+          Hecho con amor para la gente de Vercel
+        </footer>
+      </body>
     </html>
   );
 }
